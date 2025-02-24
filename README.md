@@ -1,5 +1,3 @@
-```markdown
-
 # 🚀 ЕГЭ Physics Bot: AI-репетитор для подготовки к экзамену
 
 [![Python 3.11](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org)
