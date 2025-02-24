@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+  bot:
+    build: 
+      context: .
+      dockerfile: Dockerfile
+    env_file: .env
+    volumes:
+      - ./theory:/app/theory
+      - ./tasks.json:/app/tasks.json
+    restart: unless-stopped
