@@ -1,12 +1,19 @@
 # 🚀 ЕГЭ Physics Bot: AI-репетитор для подготовки к экзамену
 
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-purple?logo=python)](https://www.python.org)
-
-[![Aiogram 3.0](https://img.shields.io/badge/Aiogram-3.0-purple?logo=telegram)](https://docs.aiogram.dev)
-
-[![Docker](https://img.shields.io/badge/Docker-24.0-purple?logo=docker)](https://www.docker.com)
-
-[![OpenAI](https://img.shields.io/badge/OpenAI-1.3-purple?logo=openai)](https://openai.com)
+<div align="left">
+  <a href="https://www.python.org">
+    <img src="https://img.shields.io/badge/Python-3.11-purple?logo=python" alt="Python">
+  </a>
+  <a href="https://docs.aiogram.dev">
+    <img src="https://img.shields.io/badge/Aiogram-3.0-purple?logo=telegram" alt="Aiogram">
+  </a>
+  <a href="https://www.docker.com">
+    <img src="https://img.shields.io/badge/Docker-24.0-purple?logo=docker" alt="Docker">
+  </a>
+  <a href="https://openai.com">
+    <img src="https://img.shields.io/badge/OpenAI-1.3-purple?logo=openai" alt="OpenAI">
+  </a>
+</div>
 
 <img src="docs/demo.gif" width="800" alt="Демо работы бота">
 
@@ -58,7 +65,7 @@ cd ege-physics-bot
 
 ```
 
-### Локальный запуск
+### - Локальный запуск
 
 ```bash
 
@@ -68,7 +75,7 @@ python bot.py
 
 ```
 
-### Docker-версия
+### - Docker-версия
 
 ```bash
 
