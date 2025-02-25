@@ -10,8 +10,8 @@
   <a href="https://www.docker.com">
     <img src="https://img.shields.io/badge/Docker-24.0-purple?logo=docker" alt="Docker">
   </a>
-  <a href="https://openai.com">
-    <img src="https://img.shields.io/badge/OpenAI-1.3-purple?logo=openai" alt="OpenAI">
+  <a href="https://google.com">
+    <img src="https://img.shields.io/badge/GeminiPro-2.0-purple?logo=Gemini" alt="OpenAI">
   </a>
 </div>
 
