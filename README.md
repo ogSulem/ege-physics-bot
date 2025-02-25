@@ -1,14 +1,26 @@
 # 🚀 ЕГЭ Physics Bot: AI-репетитор для подготовки к экзамену
 
-[![Python 3.11](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org)
+[![Python 3.11](https://img.shields.io/badge/Python-3.11-purple?logo=python)](https://www.python.org)
 
-[![Aiogram 3.0](https://img.shields.io/badge/Aiogram-3.0-green?logo=telegram)](https://docs.aiogram.dev)
+[![Aiogram 3.0](https://img.shields.io/badge/Aiogram-3.0-purple?logo=telegram)](https://docs.aiogram.dev)
 
-[![Docker](https://img.shields.io/badge/Docker-24.0-blue?logo=docker)](https://www.docker.com)
+[![Docker](https://img.shields.io/badge/Docker-24.0-purple?logo=docker)](https://www.docker.com)
 
 [![OpenAI](https://img.shields.io/badge/OpenAI-1.3-purple?logo=openai)](https://openai.com)
 
 <img src="docs/demo.gif" width="800" alt="Демо работы бота">
+
+## 🌟 Почему наш бот?
+
+<div align="center">
+  
+| 📚 **Теория** | 🧩 **Практика** | 🧠 **ИИ-аналитика** |
+|---------------|------------------|---------------------|
+| 20+ разделов с теорией в PDF/DOCX | 60+ актуальных заданий ЕГЭ | Персонализированные рекомендации |
+| Анимированные схемы | Автоматическая проверка | Адаптивная сложность задач |
+| Формулы с примерами | Пошаговые решения | Анализ прогресса |
+
+</div>
 
 ## 🌟 Основные возможности
 
@@ -20,23 +32,21 @@
 
 Интеграция с GPT-4 для персонализированных объяснений ошибок.
 
-📊 **Статистика прогресса**
-
-Трекер успеваемости по всем темам с графиками.
-
 📚 **Теоретические материалы**
 
 PDF и DOCX файлы по 20 разделам физики.
+
+⚡️ **Асинхронная архитектура**
 
 ## 🛠 Технологии
 
 - **Backend**: Python 3.11, Aiogram 3.0
 
-- **AI**: OpenAI API, Google Gemini
+- **AI**: Google Gemini Pro 2.0 
 
 - **Инфраструктура**: Docker, Docker Compose
 
-- **Аналитика**: Prometheus, Grafana
+- **Хранение данных**: JSON (задачи), FSM (состояния)
 
 ## 📦 Установка
 
@@ -44,7 +54,7 @@ PDF и DOCX файлы по 20 разделам физики.
 
 ```bash
 
-git clone https://github.com/yourusername/ege-physics-bot.git
+git clone https://github.com/ogSulem/ege-physics-bot.git
 
 cd ege-physics-bot
 
@@ -88,13 +98,12 @@ docker-compose up --build -d
 
 ## 🌟 Благодарности
 
-Спасибо сообществу [OpenAI](https://openai.com) за мощные модели ИИ.
+Спасибо
 
-[![DigitalOcean](https://img.shields.io/badge/Digital_Ocean-0080FF?logo=digitalocean)](https://www.digitalocean.com)
 
 ---
 
-**🚀 Попробуйте бота прямо сейчас:** [@EgePhysicsBot](https://t.me/NytonEGE_bot)
+**🚀 Попробуйте бота прямо сейчас:** [@NytonEGE_bot](https://t.me/NytonEGE_bot)
 
 ## 🚧 Планы развития
 - [ ] Мобильное приложение
