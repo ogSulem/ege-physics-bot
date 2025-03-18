@@ -21,7 +21,7 @@ from openai import RateLimitError
 # Константы приложения
 MAX_TASK_NUMBER = 20          # Максимальный номер задания ЕГЭ
 TASKS_PER_PAGE = 5            # Количество кнопок с заданиями в ряду
-GPT_MODEL = "google/gemini-2.0-pro-exp-02-05:free"  # Используемая AI-модель
+GPT_MODEL ="deepseek/deepseek-r1:free"
 THEORY_DIR = Path(__file__).parent / "theory"       # Путь к теоретическим материалам
 
 # Настройка системы логирования
@@ -322,22 +322,30 @@ class PhysicsBot:
             f"1. Пошаговое объяснение\n"
             f"2. Использование формул\n"
             f"3. Логические выводы\n"
-            f"4. Ответ должен быть кратким и не содержать проблемных символов, он будет перенаправлен в телеграм, который может не обработать символы\n"
+            f"4. Ответ должен быть кратким и не содержать проблемных символов, он будет перенаправлен в телеграм, который может не обработать символы (неправильно форматироваться)\n"
             f"5. Окончательный ответ: {problem['answer']}\n\n"
             f"Задача: {problem['question']}"
         )
 
     async def _get_gpt_response(self, prompt: str) -> str:
-        """Получение ответа от GPT API"""
-        retries = 5
+        """Получение ответа от GPT API с повторными попытками"""
+        retries = 5  # Количество попыток
         for i in range(retries):
-            response = self.openai_client.chat.completions.create(
-                model=GPT_MODEL,
-                messages=[{"role": "user", "content": prompt}]
-            )
-            if response.choices[0]:
-                return response.choices[0].message.content
+            try:
+                response = self.openai_client.chat.completions.create(
+                    model=GPT_MODEL,
+                    messages=[{"role": "user", "content": prompt}]
+                )
+
+                if response and response.choices:
+                    return response.choices[0].message.content
+            except Exception as e:
+                logger.error(f"Ошибка при запросе к GPT: {str(e)}")
+                await asyncio.sleep(2)  # Пауза перед следующей попыткой
+
+        # Если после всех попыток не удалось получить ответ, возвращаем None
         return None
+
 
     async def _send_gpt_response(self, message: types.Message, response: str, correct_answer: str):
         """Форматирование и отправка ответа GPT"""
